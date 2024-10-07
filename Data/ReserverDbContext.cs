@@ -23,6 +23,7 @@ public class ReserverDbContext : DbContext
             EmployeeSeeders.seed(modelBuilder);
             GuestSeeder.seed(modelBuilder);
             RoomTypeSeeder.seed(modelBuilder);
+            RoomSeeders.seed(modelBuilder);
         }
 
 }
