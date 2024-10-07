@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ReservApi.Data;
 
@@ -11,9 +12,11 @@ using ReservApi.Data;
 namespace ReservApi.Migrations
 {
     [DbContext(typeof(ReserverDbContext))]
-    partial class ReserverDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241007160749_roomspoblation")]
+    partial class roomspoblation
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -22,7 +22,7 @@ public class RoomTypeSeeder
             new RoomType
             {
                 Id=2,
-                Name = "habitacion DOBLE",
+                Name = "habitacion doble",
                 Description = "ofrece flexibilidad con dos camas individuales o una cama doble, perfecta para parejas o amigos"
             },
 
