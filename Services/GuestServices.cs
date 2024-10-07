@@ -51,12 +51,12 @@ namespace ReservApi.Services
 
         public async Task<Guest?> GetById(uint id)
         {
-            var ProductById = await _Context.Guests.FindAsync(id);
-            if (ProductById == null)
+            var GuestById = await _Context.Guests.FindAsync(id);
+            if (GuestById == null)
             {
                 return null;
             }
-            return ProductById;
+            return GuestById;
         }
 
         public Task<IEnumerable<Guest>> Search(string keyWord)
