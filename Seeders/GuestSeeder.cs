@@ -13,6 +13,7 @@ public class GuestSeeder
         modelBuilder.Entity<Guest>().HasData(
             new Guest
             {
+                Id=1,
                 FirstName = "pablo",
                 LastName = "Urregue",
                 Email = "urregue@reserve.com",
@@ -25,6 +26,7 @@ public class GuestSeeder
             },
             new Guest
             {
+                Id=2,
                 FirstName = "Laura",
                 LastName = "Gonzalez",
                 Email = "laura.g@reserve.com",
@@ -37,6 +39,7 @@ public class GuestSeeder
 
             new Guest
             {
+                Id=3,
                 FirstName = "Carlos",
                 LastName = "Martinez",
                 Email = "carlos.m@reserve.com",
@@ -49,6 +52,7 @@ public class GuestSeeder
 
             new Guest
             {
+                Id=4,
                 FirstName = "Sofia",
                 LastName = "Ramirez",
                 Email = "sofia.r@reserve.com",
@@ -61,6 +65,7 @@ public class GuestSeeder
 
             new Guest
             {
+                Id=5,
                 FirstName = "Javier",
                 LastName = "Hernandez",
                 Email = "javier.h@reserve.com",
@@ -73,6 +78,7 @@ public class GuestSeeder
 
             new Guest
             {
+                Id=6,
                 FirstName = "Ana",
                 LastName = "Lopez",
                 Email = "ana.l@reserve.com",
@@ -85,6 +91,7 @@ public class GuestSeeder
 
             new Guest
             {
+                Id=7,
                 FirstName = "Miguel",
                 LastName = "Torres",
                 Email = "miguel.t@reserve.com",
@@ -97,6 +104,7 @@ public class GuestSeeder
 
             new Guest
             {
+                Id=8,
                 FirstName = "Isabel",
                 LastName = "Fernandez",
                 Email = "isabel.f@reserve.com",
@@ -109,6 +117,7 @@ public class GuestSeeder
 
             new Guest
             {
+                Id=9,
                 FirstName = "Diego",
                 LastName = "Castro",
                 Email = "diego.c@reserve.com",
