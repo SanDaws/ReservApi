@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using ReservApi.Models;
+
+namespace ReservApi.Seeders;
+public class RoomTypeSeeder
+{
+    public static void seed(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<RoomType>().HasData(
+
+            new RoomType
+            {
+                Name = "habitacion simple",
+                Description = "Una acogedora habitación básica con una cama individual, ideal para viajeros solos"
+            },
+
+            new RoomType
+            {
+                Name = "habitacion DOBLE",
+                Description = "ofrece flexibilidad con dos camas individuales o una cama doble, perfecta para parejas o amigos"
+            },
+
+            new RoomType
+            {
+                Name = "suite",
+                Description = "espaciosa y lujosa, con una cama king size y una sala de estar separada, ideal para quienes buscan confort y exclusividad"
+            },
+
+            new RoomType
+            {
+                Name = "habitacion Familiar",
+                Description = "diseñada para familias, con espacio adicional y varias camas para una estancia cómoda"
+            }
+
+
+        );
+    }
+}
