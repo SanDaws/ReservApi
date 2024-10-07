@@ -59,9 +59,11 @@ namespace ReservApi.Services
             return GuestById;
         }
 
-        public Task<IEnumerable<Guest>> Search(string keyWord)
+        public async Task<IEnumerable<Guest>> Search(string keyWord)
         {
-            throw new NotImplementedException();
+            IEnumerable<Guest> Result= await _Context.Guests
+            .Where(R=> R.Email.Contains(keyWord) || R.FirstName.Contains(keyWord)|| R.LastName.Contains(keyWord) ).ToListAsync();
+        return Result;
         }
 
         public async Task Update(Guest newGuest)
