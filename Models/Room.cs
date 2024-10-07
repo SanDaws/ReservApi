@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace ReservApi.Models;
+[Table("rooms")]
 public class Room
 {
     /* Model:
