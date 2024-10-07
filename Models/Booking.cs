@@ -52,7 +52,7 @@ public class Booking
     [ForeignKey(nameof(GuestID))]
     public Guest GuestFK{get;set;} 
 
-   [ForeignKey(nameof(RoomFk))]
+   [ForeignKey(nameof(RoomID))]
     public Room RoomFk{get;set;}
 
 
