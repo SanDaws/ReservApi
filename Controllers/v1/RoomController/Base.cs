@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using ReservApi.Repositories;
 
-namespace ReservApi.Controllers.RoomController
+namespace ReservApi.Controllers.v1.RoomController
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     public class Base : ControllerBase
     {
      protected readonly IRoomRepository _Services;

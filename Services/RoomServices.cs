@@ -21,17 +21,17 @@ namespace ReservApi.Services
 
         public async Task<IEnumerable<Room>> GetAll()
         {
-            return await _Context.Rooms.AsNoTracking().ToListAsync();
+            return await _Context.Rooms.Include(Roomtype=> Roomtype.RoomTypeFK).AsNoTracking().ToListAsync();
         }
 
         public async Task<IEnumerable<Room>> GetAvaliable()
         {
-            return await _Context.Rooms.Where(rooms=>rooms.Avaliability==true).ToListAsync();
+            return await _Context.Rooms.Where(rooms=>rooms.Avaliability==true).Include(Typeroom => Typeroom.RoomTypeFK).ToListAsync();
         }
 
         public async Task<IEnumerable<Room>> NotAvaliable()
         {
-           return await _Context.Rooms.Where(rooms=>rooms.Avaliability== false).ToListAsync();
+           return await _Context.Rooms.Where(rooms=>rooms.Avaliability== false).Include(Typeroom => Typeroom.RoomTypeFK).ToListAsync();
         }
 
         public async Task<IEnumerable<RoomDetailedDto>> GetDetail(uint id)
@@ -44,7 +44,7 @@ namespace ReservApi.Services
                 Id=Room.Id,
                 RoomNumber=Room.RoomNumber,
                 PricePernight=Room.PricePernight,
-                Avaliability=Room.Avaliability,
+                Avaliability=(Room.Avaliability==true)?"si":"no",
                 Capasity=Room.Capasity,
                 Name=Room.RoomTypeFK.Name,
                 Description=Room.RoomTypeFK.Description

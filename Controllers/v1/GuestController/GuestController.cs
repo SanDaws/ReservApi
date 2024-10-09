@@ -10,10 +10,10 @@ using ReservApi.Repositories;
 namespace ReservApi.Controllers.v1.GuestController
 {
     [ApiController]
-    [Route("api/[controller]")]
-    public class GuestCreate : Base
+    [Route("api/v1/[controller]")]
+    public class GuestController : Base
     {
-        public GuestCreate(IGuestRepository productRepositories) : base(productRepositories)
+        public GuestController(IGuestRepository productRepositories) : base(productRepositories)
         {
         }
         [HttpGet]

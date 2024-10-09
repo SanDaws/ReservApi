@@ -8,7 +8,7 @@ using ReservApi.Repositories;
 namespace ReservApi.Controllers.v1.GuestController
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     public class Base : ControllerBase
     {
         protected readonly IGuestRepository _Services;

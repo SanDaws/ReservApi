@@ -10,7 +10,7 @@ using ReservApi.Repositories;
 namespace ReservApi.Controllers.v1.Auth
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     public class LoginController : Base
     {
         public LoginController(IEmployeeRepository productRepositories) : base(productRepositories)

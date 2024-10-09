@@ -15,7 +15,7 @@ namespace ReservApi.DTOs.Response
 
         public double PricePernight { get; set; }
 
-        public bool Avaliability { get; set; }
+        public string Avaliability { get; set; }
 
         public Byte Capasity { get; set; }
         public string Name { get; set; }
