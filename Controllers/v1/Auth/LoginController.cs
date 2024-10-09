@@ -18,7 +18,6 @@ namespace ReservApi.Controllers.v1.Auth
         }
 
         [HttpPost]
-        [Authorize]
         public async Task<IActionResult> Login(LoginDto productDtodto){
             if (!ModelState.IsValid)
             {
